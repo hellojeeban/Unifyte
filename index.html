@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unifyte Bill ERP - The ultimate cloud-native SaaS Invoicing, Inventory, and Financial Analytics Platform for Small and Medium Enterprises (SMEs). Streamline GST billing, automate stocks, and collect instant UPI payments.">
+    <meta name="keywords" content="ERP, Invoicing, Billing SaaS, Inventory Tracking, SME Finance, UPI Invoicing, Tax Compliance, GST Calculator, AI Business Coach, Unifyte">
+    <meta name="author" content="Unifyte Startup">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Unifyte Bill ERP | Smarter Invoicing, Inventory & Analytics for SMEs">
+    <meta property="og:description" content="Unifyte combines financial dashboard metrics, automated stock tracking, tax-compliant invoicing, and instant digital payment collection in a unified, cloud-native platform.">
+    <meta property="og:image" content="assets/dashboard.png">
+    <meta property="og:type" content="website">
+
+    <title>Unifyte Bill ERP | Bill Smarter. Grow Faster.</title>
+
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    
+    <!-- Decorative background glow meshes -->
+    <div class="mesh-glow mesh-1"></div>
+    <div class="mesh-glow mesh-2"></div>
+    <div class="mesh-glow mesh-3"></div>
+
+    <!-- HEADER / NAVIGATION BAR -->
+    <header class="sticky-nav" id="main-header">
+        <div class="nav-container">
+            <a href="#" class="brand-logo" id="logo-link">
+                <!-- SVG styled identically to Unifyte's logo -->
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#8b5cf6" />
+                            <stop offset="100%" stop-color="#3b82f6" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Elegant 'U' shape from logo screenshot -->
+                    <path d="M20 20 H36 V60 C36 68 42 74 50 74 C58 74 64 68 64 60 V20 H80 V60 C80 76 67 90 50 90 C33 90 20 76 20 60 Z" fill="url(#logo-gradient)"/>
+                    <path d="M68 76 L80 88 H68 Z" fill="#3b82f6"/>
+                </svg>
+                <div class="logo-text-group">
+                    <span class="logo-name">unifyte</span>
+                    <span class="logo-tagline">Bill Smarter. Grow Faster.</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navigation-menu">
+                <a href="#features" class="nav-item">Features</a>
+                <a href="#simulator" class="nav-item">Live Demo</a>
+                <a href="#ai-coach" class="nav-item">AI Coach</a>
+                <a href="#pricing" class="nav-item">Pricing</a>
+                <a href="#roadmap" class="nav-item">Roadmap</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#pricing" class="btn btn-secondary nav-login-btn">Log In</a>
+                <a href="#pricing" class="btn btn-primary nav-cta-btn">Start Free Trial</a>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN APP WRAPPER -->
+    <main>
+        
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="hero">
+            <div class="hero-container">
+                
+                <!-- Hero Left: Value Prop Column -->
+                <div class="hero-content">
+                    <div class="badge-container">
+                        <span class="promo-badge">🚀 Empowering 10,000+ SMEs Globally</span>
+                    </div>
+                    <h1 class="hero-title">Run Your Business.<br><span class="gradient-text">Smarter with Unifyte.</span></h1>
+                    <p class="hero-subtitle">All-in-one invoicing, inventory, and real-time financial analytics to help you <span class="highlight-green">get paid faster</span> and grow your business effortlessly.</p>
+                    
+                    <!-- Bullet Points with Premium Icons -->
+                    <div class="hero-bullets">
+                        <div class="bullet-item">
+                            <div class="icon-wrapper primary-glow">
+                                <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="bullet-text">
+                                <h3>Smart Invoicing</h3>
+                                <p>Create tax-compliant invoices in under 10 seconds.</p>
+                            </div>
+                        </div>
+
+                        <div class="bullet-item">
+                            <div class="icon-wrapper secondary-glow">
+                                <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                </svg>
+                            </div>
+                            <div class="bullet-text">
+                                <h3>Inventory Management</h3>
+                                <p>Automated stock deduction & low-stock alerts.</p>
+                            </div>
+                        </div>
+
+                        <div class="bullet-item">
+                            <div class="icon-wrapper accent-glow">
+                                <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                                </svg>
+                            </div>
+                            <div class="bullet-text">
+                                <h3>Business Insights</h3>
+                                <p>Real-time analytics of sales trends, margins, and dues.</p>
+                            </div>
+                        </div>
+
+                        <div class="bullet-item">
+                            <div class="icon-wrapper pink-glow">
+                                <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                </svg>
+                            </div>
+                            <div class="bullet-text">
+                                <h3>Payment Reminders</h3>
+                                <p>Automated outstanding customer dues routing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action buttons -->
+                    <div class="hero-actions">
+                        <a href="#simulator" class="btn btn-primary btn-lg glowing-btn">Get Started for Free <span class="arrow">→</span></a>
+                        <span class="hero-security-text">
+                            <svg class="secure-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            Secure. Reliable. Built for Growth.
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Dynamic Interactive Dashboard Widget -->
+                <div class="hero-dashboard-container">
+                    <div class="glass-dashboard" id="live-dashboard">
+                        <!-- Dashboard Top Title & Brand -->
+                        <div class="db-header">
+                            <div class="db-logo">
+                                <svg class="logo-svg-small" viewBox="0 0 100 100">
+                                    <path d="M20 20 H36 V60 C36 68 42 74 50 74 C58 74 64 68 64 60 V20 H80 V60 C80 76 67 90 50 90 C33 90 20 76 20 60 Z" fill="url(#logo-gradient)"/>
+                                </svg>
+                                <span class="db-logo-text">unifyte</span>
+                            </div>
+                            <!-- Timeframe Toggler (INTERACTIVE) -->
+                            <div class="db-timeframe-toggler">
+                                <button class="db-time-btn" data-time="today">Today</button>
+                                <button class="db-time-btn" data-time="week">This Week</button>
+                                <button class="db-time-btn active" data-time="month">This Month</button>
+                                <button class="db-time-btn" data-time="all">All Time</button>
+                            </div>
+                        </div>
+
+                        <!-- Mini quick stats bar -->
+                        <div class="db-quick-stats">
+                            <div class="qs-item">
+                                <span class="qs-label">Avg Invoice Value</span>
+                                <span class="qs-value" id="stat-avg">₹16,151.25</span>
+                            </div>
+                            <div class="qs-item">
+                                <span class="qs-label">Collection Rate</span>
+                                <span class="qs-value text-green" id="stat-collection">80.6%</span>
+                            </div>
+                            <div class="qs-item">
+                                <span class="qs-label">Total Customers</span>
+                                <span class="qs-value" id="stat-customers">2</span>
+                            </div>
+                        </div>
+
+                        <!-- Dashboard Grid Layout -->
+                        <div class="db-grid">
+                            
+                            <!-- Left Sidebar menu (static aesthetic mockup) -->
+                            <div class="db-sidebar">
+                                <div class="side-item active" id="db-side-dash"><span class="side-icon">📊</span> Dashboard</div>
+                                <div class="side-item"><span class="side-icon">📄</span> Invoices</div>
+                                <div class="side-item"><span class="side-icon">📦</span> Inventory</div>
+                                <div class="side-item"><span class="side-icon">👥</span> Customers</div>
+                                <div class="side-item"><span class="side-icon">🤖</span> AI Assistant</div>
+                                <div class="side-item" id="db-side-billing"><span class="side-icon">💳</span> Billing</div>
+                                <div class="side-user">
+                                    <div class="user-avatar">J</div>
+                                    <div class="user-info">
+                                        <p class="user-name">Jhonny</p>
+                                        <p class="user-email">jhonny@book.me</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main Workspace of Mockup -->
+                            <div class="db-workspace">
+                                
+                                <!-- Overview Pane -->
+                                <div id="db-overview-pane">
+                                    <div class="workspace-title-row">
+                                        <div>
+                                            <h2>Overview</h2>
+                                            <p class="sub-muted">Here's your actionable business data for <span id="active-time-text">This Month</span>.</p>
+                                        </div>
+                                        <div class="workspace-actions">
+                                            <button class="db-btn-circle"><span class="bell-icon">🔔</span></button>
+                                            <a href="#simulator" class="db-action-btn"><span class="plus-icon">+</span> Create Invoice</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Key Financial Cards Row -->
+                                    <div class="db-metrics-cards">
+                                        <div class="db-card metric-card primary-card">
+                                            <div class="card-label">TOTAL REVENUE <span class="badge-growth" id="metric-growth">+12.5%</span></div>
+                                            <div class="card-value" id="metric-revenue">₹64,605.00</div>
+                                            <span class="card-footer-lbl">View Sales Report &rarr;</span>
+                                        </div>
+
+                                        <div class="db-card metric-card margin-card">
+                                            <div class="card-label">PROFIT ESTIMATE <span class="badge-margin" id="metric-margin-pct">49.8% Margin</span></div>
+                                            <div class="card-value" id="metric-profit">₹32,200.00</div>
+                                            <span class="card-footer-lbl">Based on product cost</span>
+                                        </div>
+
+                                        <div class="db-card metric-card generated-card">
+                                            <div class="card-label">INVOICES GENERATED</div>
+                                            <div class="card-value" id="metric-count">4</div>
+                                            <span class="card-footer-lbl">Total for this period</span>
+                                        </div>
+
+                                        <div class="db-card metric-card due-card highlight-due">
+                                            <div class="card-label">PENDING DUES <span class="badge-unpaid" id="metric-due-count">2 Unpaid</span></div>
+                                            <div class="card-value text-pink" id="metric-due">₹44,840.00</div>
+                                            <a href="#simulator" class="btn-due-collect">Collect Payments</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Chart Row: Analytics Trend & Donut status -->
+                                    <div class="db-charts-row">
+                                        
+                                        <!-- Trend Chart (INTERACTIVE SVG) -->
+                                        <div class="db-card chart-card flex-2">
+                                            <div class="chart-header">
+                                                <h3>Sales Trend</h3>
+                                                <span class="chart-legend"><span class="legend-dot bg-violet"></span> Sales Trend</span>
+                                            </div>
+                                            <div class="svg-container">
+                                                <!-- SVG Chart drawn & manipulated dynamically by Javascript -->
+                                                <svg viewBox="0 0 500 200" class="trend-svg" id="sales-trend-svg">
+                                                    <!-- Grid lines -->
+                                                    <line x1="40" y1="20" x2="480" y2="20" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+                                                    <line x1="40" y1="65" x2="480" y2="65" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+                                                    <line x1="40" y1="110" x2="480" y2="110" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+                                                    <line x1="40" y1="155" x2="480" y2="155" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+                                                    
+                                                    <!-- Gradient area under the line -->
+                                                    <defs>
+                                                        <linearGradient id="chart-area-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                            <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25" />
+                                                            <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.0" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <!-- Shaded Area Path -->
+                                                    <path d="M 40 155 Q 120 130 180 145 T 320 85 T 460 120 L 460 155 Z" fill="url(#chart-area-grad)" id="trend-area-path" />
+                                                    
+                                                    <!-- Sparkline Path -->
+                                                    <path d="M 40 155 Q 120 130 180 145 T 320 85 T 460 120" fill="none" stroke="#6366f1" stroke-width="3" stroke-linecap="round" id="trend-line-path" />
+                                                    
+                                                    <!-- Data Nodes circles -->
+                                                    <circle cx="40" cy="155" r="4" fill="#00f2fe" class="chart-point" />
+                                                    <circle cx="150" cy="138" r="4" fill="#00f2fe" class="chart-point" />
+                                                    <circle cx="260" cy="115" r="4" fill="#00f2fe" class="chart-point" />
+                                                    <circle cx="370" cy="72" r="4" fill="#00f2fe" class="chart-point" />
+                                                    <circle cx="460" cy="120" r="4" fill="#00f2fe" class="chart-point" />
+                                                    
+                                                    <!-- X Axis Labels -->
+                                                    <text x="40" y="180" class="chart-lbl">Week 1</text>
+                                                    <text x="150" y="180" class="chart-lbl">Week 2</text>
+                                                    <text x="260" y="180" class="chart-lbl">Week 3</text>
+                                                    <text x="370" y="180" class="chart-lbl">Week 4</text>
+                                                    <text x="460" y="180" class="chart-lbl">Week 5</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <!-- Status Pie Donut (INTERACTIVE CSS) -->
+                                        <div class="db-card chart-card flex-1 align-center">
+                                            <h3>Payment Status</h3>
+                                            <div class="donut-chart-container">
+                                                <div class="donut-chart" id="payment-donut" style="background: conic-gradient(#10b981 0% 70%, #f59e0b 70% 100%);">
+                                                    <div class="donut-center">
+                                                        <span class="donut-text" id="donut-center-pct">80.6%</span>
+                                                        <span class="donut-sub">Paid</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="donut-legend">
+                                                <span class="lbl-legend"><span class="l-dot bg-green"></span> Paid</span>
+                                                <span class="lbl-legend"><span class="l-dot bg-yellow"></span> Pending</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Workspace Billing Pane (SUBSCRIPTION PORTAL) -->
+                                <div id="db-billing-pane" style="display: none;">
+                                    
+                                    <!-- Current Active Tier Header Card -->
+                                    <div class="billing-active-banner">
+                                        <div class="bab-left">
+                                            <span class="bab-sm-lbl">CURRENT ACTIVE TIER</span>
+                                            <div class="bab-title-row">
+                                                <h2 id="billing-current-tier-title">FREE Plan</h2>
+                                                <span class="badge-active-pill" id="billing-current-badge">ACTIVE</span>
+                                            </div>
+                                            <p class="bab-validity-row">
+                                                <!-- Calendar Icon -->
+                                                <svg class="bab-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                                </svg>
+                                                Plan validity: <span id="billing-current-validity">Jun 27, 2026</span>
+                                            </p>
+                                        </div>
+                                        <div class="bab-right">
+                                            <div class="tenant-reg-card">
+                                                <span class="tenant-reg-lbl">Tenant Registration ID</span>
+                                                <span class="tenant-reg-id" id="billing-tenant-id">4db1515e-50b6-4715-a515-2d9b4a0488d9</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="billing-pane-title">Choose a plan for your business</h3>
+                                    
+                                    <!-- Subscription Options Grid -->
+                                    <div class="billing-portal-grid">
+                                        
+                                        <!-- PLAN 1: FREE -->
+                                        <div class="bp-card active-plan-highlight" id="bp-card-free">
+                                            <div class="bp-active-banner-flag" id="bp-flag-free">ACTIVE PLAN</div>
+                                            <div class="bp-card-header">
+                                                <span class="bp-plan-name">FREE</span>
+                                                <p class="bp-plan-sub">Perfect for getting started</p>
+                                                <div class="bp-price-row">
+                                                    <span class="bp-price-amt">₹0</span><span class="bp-price-period">/month</span>
+                                                </div>
+                                            </div>
+                                            <div class="receipt-divider"></div>
+                                            <ul class="bp-features-list">
+                                                <li>
+                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                                    </svg>
+                                                    Up to 5 invoices/mo
+                                                </li>
+                                                <li>
+                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                                    </svg>
+                                                    Standard PDF delivery
+                                                </li>
+                                                <li>
+                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                                    </svg>
+                                                    Basic dashboard analytics
+                                                </li>
+                                                <li>
+                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                                    </svg>
+                                                    Single user access
+                                                </li>
+                                            </ul>
+                                            <button class="bp-btn btn-bp-active" id="bp-btn-free" disabled>Active</button>
+                                        </div>
+
+                                        <!-- PLAN 2: STARTER -->
+                                        <div class="bp-card" id="bp-card-starter">
+                                            <div class="bp-active-banner-flag" id="bp-flag-starter" style="display: none;">ACTIVE PLAN</div>
+                                            <div class="bp-card-header">
+                                                <span class="bp-plan-name">STARTER</span>
+                                                <p class="bp-plan-sub">Best for growing retail shops</p>
+                                                <div class="bp-price-row">
+                                                    <span class="bp-price-amt">₹499</span><span class="bp-price-period">/month</span>
+                                                </div>
+                                            </div>
+                                            <div class="receipt-divider"></div>
+                                            <ul class="bp-features-list">
+                                                <li>
+                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                                    </svg>
+                                                    Unlimited invoices
+                                                </li>
+                                                <li>
+                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                                    </svg>
+                                                    Dynamic UPI QR Codes
+                                                </li>
+                                                <li>
+                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                                    </svg>
+                                                    SendGrid automated emails
+                                                </li>
+                                                <li>
+                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                                    </svg>
+                                                    Overdue chaser cron job
+                                                </li>
+                                            </ul>
+                                            <button class="bp-btn btn-bp-buy" id="bp-btn-starter" data-upgrade="STARTER">Buy Now</button>
+                                        </div>
+
+                                        <!-- PLAN 3: PRO -->
+                                        <div class="bp-card" id="bp-card-pro">
+                                            <div class="bp-active-banner-flag" id="bp-flag-pro" style="display: none;">ACTIVE PLAN</div>
+                                            <div class="bp-card-header">
+                                                <span class="bp-plan-name">PRO</span>
+                                                <p class="bp-plan-sub">Built for professional scale</p>
+                                                <div class="bp-price-row">
+                                                    <span class="bp-price-amt">₹999</span><span class="bp-price-period">/month</span>
+                                                </div>
+                                            </div>
+                                            <div class="receipt-divider"></div>
+                                            <ul class="bp-features-list">
+                                                <li>
+                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                                    </svg>
+                                                    Everything in Starter
+                                                </li>
+                                                <li>
+                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                                    </svg>
+                                                    Advanced collection insights
+                                                </li>
+                                                <li>
+                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                                    </svg>
+                                                    Premium receipt screenshots
+                                                </li>
+                                                <li>
+                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                                    </svg>
+                                                    Sentry priority support
+                                                </li>
+                                            </ul>
+                                            <button class="bp-btn btn-bp-buy" id="bp-btn-pro" data-upgrade="PRO">Buy Now</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Trust Bar / Feature summary banner -->
+            <div class="trust-bar">
+                <div class="trust-container">
+                    <div class="trust-item">
+                        <span class="trust-icon">☁️</span>
+                        <div>
+                            <h4>Cloud-Based SaaS</h4>
+                            <p>Access anywhere, anytime</p>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">🔒</span>
+                        <div>
+                            <h4>Secure & Private</h4>
+                            <p>Fully isolated workspaces</p>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">⚡</span>
+                        <div>
+                            <h4>Easy to Use</h4>
+                            <p>No configuration needed</p>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">📈</span>
+                        <div>
+                            <h4>Scalable Model</h4>
+                            <p>Grows seamlessly with you</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROBLEM VS SOLUTION SECTION -->
+        <section class="comparison-section" id="features">
+            <div class="section-container">
+                <div class="section-header align-center">
+                    <h2 class="section-title">Say Goodbye to <span class="gradient-text-red">Fragmented Operations</span></h2>
+                    <p class="section-subtitle">SMEs lose hours every day syncing stock levels, chasing overdue payments, and manual calculating tax formulas. Unifyte bridges all components into one instant platform.</p>
+                </div>
+
+                <div class="comparison-grid">
+                    <!-- The Old Way (Fading Red Aesthetic) -->
+                    <div class="comp-card chaotic-way">
+                        <div class="comp-header">
+                            <span class="status-marker bg-red-trans">⚠️ Fragmented Chaos</span>
+                            <h3>The Old Manual Setup</h3>
+                        </div>
+                        <ul class="comp-list">
+                            <li>
+                                <span class="bullet-cross">✕</span>
+                                <div>
+                                    <strong>Messy Excel Logs:</strong> Manual stock counts are out of sync, leading to overselling or lost asset value.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="bullet-cross">✕</span>
+                                <div>
+                                    <strong>Lost Unpaid Debts:</strong> Dues tracked on paper ledger books or loose notes get forgotten, crippling cash flow.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="bullet-cross">✕</span>
+                                <div>
+                                    <strong>Billing Friction:</strong> Writing invoices by hand, mailing static PDFs, and asking for bank transfers slows down payment.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="bullet-cross">✕</span>
+                                <div>
+                                    <strong>Blind Business Moves:</strong> Working out margins or analyzing tax compliance takes hours of painful accounting preparation.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- The New Way (Glow Violet Aesthetic) -->
+                    <div class="comp-card unifyte-way">
+                        <div class="comp-header">
+                            <span class="status-marker bg-green-trans">✨ The Unifyte Flow</span>
+                            <h3>The Closed-Loop Experience</h3>
+                        </div>
+                        <ul class="comp-list">
+                            <li>
+                                <span class="bullet-check">✓</span>
+                                <div>
+                                    <strong>Closed-Loop Inventory:</strong> Stocks decrement automatically upon invoicing, triggering real-time alerts.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="bullet-check">✓</span>
+                                <div>
+                                    <strong>Smart UPI Collections:</strong> Dynamic UPI payment QR codes embedded automatically inside generated invoice bills.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="bullet-check">✓</span>
+                                <div>
+                                    <strong>One-Click Tax Filing:</strong> Automatically calculates item line GST/Tax brackets with customized invoicing layouts.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="bullet-check">✓</span>
+                                <div>
+                                    <strong>Real-Time Analytics:</strong> View exact margins, cash-flow metrics, and outstanding payments at a single glance.
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="comp-glow-effect"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIVE INTERACTIVE CALCULATOR SIMULATOR SECTION -->
+        <section class="simulator-section" id="simulator">
+            <div class="section-container">
+                <div class="simulator-grid">
+                    
+                    <!-- Simulator Form (Interactive Inputs) -->
+                    <div class="simulator-left glass-card">
+                        <div class="badge-container">
+                            <span class="interactive-badge">⚡ Interactive Simulator</span>
+                        </div>
+                        <h2>Create a Bill & Deduct Stock <span class="gradient-text">In Real-Time</span></h2>
+                        <p class="sub-muted font-sm mb-4">Try it out! Type a product, select a quantity, assign tax brackets, and see how inventory automatically decrements upon invoicing.</p>
+
+                        <!-- Stock Status Tracker Panel -->
+                        <div class="stock-status-box">
+                            <div class="ss-header">
+                                <span>📦 Real-time Inventory Store</span>
+                                <span class="stock-badge" id="sim-stock-badge">8 in stock</span>
+                            </div>
+                            <div class="stock-bar-bg">
+                                <div class="stock-bar-fill" id="sim-stock-fill" style="width: 80%;"></div>
+                            </div>
+                            <p class="stock-warning-txt text-pink" id="sim-stock-warning">
+                                <svg class="warning-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg> Low stock threshold reached! Reorder recommended.
+                            </p>
+                        </div>
+
+                        <!-- Billing Inputs Form -->
+                        <form id="sim-billing-form" onsubmit="return false;">
+                            <div class="form-row">
+                                <div class="form-group flex-2">
+                                    <label for="sim-item-name">Select Product</label>
+                                    <select id="sim-item-name" class="form-control">
+                                        <option value="Premium Headphones">Premium Headphones (₹2,500.00 cost)</option>
+                                        <option value="Ergonomic Desk Chair">Ergonomic Desk Chair (₹8,900.00 cost)</option>
+                                        <option value="Smart LED Desk Lamp">Smart LED Desk Lamp (₹1,200.00 cost)</option>
+                                        <option value="Mechanical Keyboard">Mechanical Keyboard (₹4,500.00 cost)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group flex-1">
+                                    <label for="sim-item-qty">Quantity</label>
+                                    <input type="number" id="sim-item-qty" class="form-control" value="1" min="1" max="10">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group flex-1">
+                                    <label for="sim-item-price">Unit Price (₹)</label>
+                                    <input type="number" id="sim-item-price" class="form-control" value="4500" min="1">
+                                </div>
+                                <div class="form-group flex-1">
+                                    <label for="sim-item-tax">Tax Rate (GST)</label>
+                                    <select id="sim-item-tax" class="form-control">
+                                        <option value="0.05">5% GST (Standard Goods)</option>
+                                        <option value="0.12">12% GST (Electronics/FMCG)</option>
+                                        <option value="0.18" selected>18% GST (Services/Premium IT)</option>
+                                        <option value="0.28">28% GST (Luxury Items)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sim-customer">Customer Reference</label>
+                                <input type="text" id="sim-customer" class="form-control" value="Supreme Distributors Ltd.">
+                            </div>
+
+                            <div class="simulator-actions">
+                                <button type="button" class="btn btn-primary w-100 btn-glow" id="btn-generate-invoice">
+                                    📄 Generate Bill & Deduct Stock
+                                </button>
+                                <button type="button" class="btn btn-secondary w-100" id="btn-reset-simulator">
+                                    🔄 Reset Stock to 10
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Simulator Output (The Generated Invoice Bill & UPI Payment) -->
+                    <div class="simulator-right">
+                        <div class="glass-receipt" id="generated-receipt">
+                            <!-- Receipt Branding Header -->
+                            <div class="receipt-header">
+                                <div class="receipt-logo">
+                                    <svg class="logo-svg-micro" viewBox="0 0 100 100">
+                                        <path d="M20 20 H36 V60 C36 68 42 74 50 74 C58 74 64 68 64 60 V20 H80 V60 C80 76 67 90 50 90 C33 90 20 76 20 60 Z" fill="url(#logo-gradient)"/>
+                                    </svg>
+                                    <span>UNIFYTE BILL ERP</span>
+                                </div>
+                                <div class="receipt-meta">
+                                    <p class="receipt-id" id="rec-id">INV-2026-0089</p>
+                                    <p class="receipt-date" id="rec-date">May 29, 2026</p>
+                                </div>
+                            </div>
+
+                            <div class="receipt-divider"></div>
+
+                            <!-- Billed To / From info -->
+                            <div class="receipt-parties">
+                                <div class="party-col">
+                                    <span class="party-lbl">Billed From:</span>
+                                    <p class="party-name">Global Tech Retailers Inc.</p>
+                                    <p class="party-tax">GSTIN: 27AAAAA1111A1Z1</p>
+                                </div>
+                                <div class="party-col align-right">
+                                    <span class="party-lbl">Billed To:</span>
+                                    <p class="party-name" id="rec-client">Supreme Distributors Ltd.</p>
+                                    <p class="party-tax">Status: <span class="badge-receipt-unpaid">UNPAID</span></p>
+                                </div>
+                            </div>
+
+                            <!-- Invoice Items Table -->
+                            <table class="receipt-table">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th class="align-center">Qty</th>
+                                        <th class="align-right">Unit Price</th>
+                                        <th class="align-right">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id="rec-item-row">
+                                        <td>
+                                            <strong id="rec-item-name">Premium Headphones</strong>
+                                            <span class="tax-rate-sub" id="rec-tax-lbl">18% GST (Included)</span>
+                                        </td>
+                                        <td class="align-center" id="rec-item-qty">1</td>
+                                        <td class="align-right" id="rec-item-unit">₹4,500.00</td>
+                                        <td class="align-right" id="rec-item-subtotal">₹4,500.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="receipt-divider"></div>
+
+                            <!-- Financial Breakdown Summary -->
+                            <div class="receipt-breakdown">
+                                <div class="rb-row">
+                                    <span>Item Subtotal:</span>
+                                    <span id="rec-calc-sub">₹3,813.56</span>
+                                </div>
+                                <div class="rb-row">
+                                    <span id="rec-calc-tax-lbl">Tax Amount (GST 18%):</span>
+                                    <span id="rec-calc-tax">₹686.44</span>
+                                </div>
+                                <div class="receipt-total-row">
+                                    <span>Grand Total:</span>
+                                    <span id="rec-calc-total">₹4,500.00</span>
+                                </div>
+                            </div>
+
+                            <!-- Payment Section (DYNAMIC UPI QR CODE) -->
+                            <div class="receipt-payment-section">
+                                <div class="payment-instructions">
+                                    <h4>⚡ Instant UPI Bill Payment</h4>
+                                    <p>Scan the dynamic QR code from any bank app (BHIM, GooglePay, PhonePe, Paytm) to pay securely in seconds.</p>
+                                    <div class="payment-upi-id">UPI Ref: <span class="upi-highlight">pay@unifyte.in</span></div>
+                                </div>
+                                
+                                <div class="upi-qr-wrapper">
+                                    <!-- Embedded Interactive SVG UPI QR Code representation -->
+                                    <svg viewBox="0 0 100 100" class="qr-svg" id="upi-qr-svg">
+                                        <!-- Outer border anchors -->
+                                        <rect x="5" y="5" width="20" height="20" fill="none" stroke="#ffffff" stroke-width="3" />
+                                        <rect x="10" y="10" width="10" height="10" fill="#ffffff" />
+                                        
+                                        <rect x="75" y="5" width="20" height="20" fill="none" stroke="#ffffff" stroke-width="3" />
+                                        <rect x="80" y="10" width="10" height="10" fill="#ffffff" />
+                                        
+                                        <rect x="5" y="75" width="20" height="20" fill="none" stroke="#ffffff" stroke-width="3" />
+                                        <rect x="10" y="80" width="10" height="10" fill="#ffffff" />
+
+                                        <!-- Dynamic QR dots (represented by detailed lines to look real and futuristic) -->
+                                        <path d="M 40 10 H 50 V 20 H 40 Z M 60 10 H 70 V 15 H 60 Z M 40 30 H 45 V 40 H 40 Z M 50 35 H 65 V 40 H 50 Z" fill="#ffffff" />
+                                        <path d="M 10 40 H 25 V 50 H 10 Z M 30 50 H 45 V 60 H 30 Z M 55 50 H 70 V 55 H 55 Z M 75 40 H 90 V 50 H 75 Z" fill="#ffffff" />
+                                        <path d="M 40 60 H 50 V 70 H 40 Z M 60 70 H 80 V 75 H 60 Z M 40 85 H 55 V 90 H 40 Z M 60 85 H 65 V 90 H 60 Z" fill="#ffffff" />
+                                        
+                                        <!-- Central Unifyte U Logo to look ultra-premium -->
+                                        <rect x="42" y="42" width="16" height="16" fill="#080a14" rx="2" />
+                                        <path d="M 46 45 H 50 V 51 C 50 53 52 54 54 54 C 56 54 58 53 58 51 V 45 H 62 V 51 C 62 55 58 58 54 58 C 50 58 46 55 46 51 Z" fill="url(#logo-gradient)" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="receipt-footer-brand">
+                                <p>Powered by Unifyte SaaS Engine &bull; Secured with TLS 256-Bit</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- AI BUSINESS COACH INTERACTIVE SANDBOX SECTION -->
+        <section class="ai-coach-section" id="ai-coach">
+            <div class="section-container">
+                <div class="ai-coach-wrapper">
+                    
+                    <!-- Text Info Column -->
+                    <div class="coach-info">
+                        <div class="badge-container">
+                            <span class="ai-badge">🤖 Next-Gen Smart SaaS</span>
+                        </div>
+                        <h2>Your Personal <span class="gradient-text-purple">AI Business Coach</span></h2>
+                        <p class="section-subtitle">No more guessing your margins, inventory reorder times, or which customer might default. Unifyte builds analytical forecasts directly inside your platform.</p>
+                        
+                        <div class="coach-features-list">
+                            <div class="cf-item">
+                                <span class="cf-bullet">🔮</span>
+                                <div>
+                                    <strong>Predictive Cash Flow:</strong> Foresee cash shortages or surplus spikes weeks before they happen.
+                                </div>
+                            </div>
+                            <div class="cf-item">
+                                <span class="cf-bullet">🚨</span>
+                                <div>
+                                    <strong>Late Payer Flagger:</strong> Flags late-paying invoices and custom schedules automatic follow-up reminders.
+                                </div>
+                            </div>
+                            <div class="cf-item">
+                                <span class="cf-bullet">📈</span>
+                                <div>
+                                    <strong>Procurement Forecasting:</strong> Reorders raw materials automatically at optimal market prices.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sandbox Chat Interface (INTERACTIVE) -->
+                    <div class="coach-sandbox-container">
+                        <div class="glass-chat-panel">
+                            <!-- Chat Title Header -->
+                            <div class="chat-header">
+                                <div class="chat-bot-avatar">
+                                    <span class="bot-icon">🤖</span>
+                                    <span class="online-indicator"></span>
+                                </div>
+                                <div class="chat-title-group">
+                                    <h4>Unifyte Business Coach</h4>
+                                    <p class="status-lbl">Online &bull; Analyzing your database</p>
+                                </div>
+                            </div>
+
+                            <!-- Chat Messages List -->
+                            <div class="chat-messages" id="chat-scroller">
+                                <div class="chat-msg bot-msg">
+                                    <p>Hello! I am your AI Business Coach. I analyze your multi-tenant sales database, customer receipts, and stocks in real-time. Select a query below to see what I can forecast for your business today.</p>
+                                    <span class="msg-time">Just now</span>
+                                </div>
+                            </div>
+
+                            <!-- Preset Query Prompt Pills -->
+                            <div class="chat-query-suggestions" id="chat-presets">
+                                <button class="query-pill" data-query="cashflow">🔮 Forecast next month's cash flow</button>
+                                <button class="query-pill" data-query="latepayers">💸 Flag high-risk late payers</button>
+                                <button class="query-pill" data-query="reorder">📦 When should I reorder stock?</button>
+                                <button class="query-pill" data-query="margin">📊 Analyze our current profit margin</button>
+                            </div>
+
+                            <!-- Chat Typing Indicator -->
+                            <div class="chat-typing-indicator" id="chat-typing">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MONETIZATION & PRICING PLANS SECTION -->
+        <section class="pricing-section" id="pricing">
+            <div class="section-container">
+                <div class="section-header align-center">
+                    <h2 class="section-title">Transparent, <span class="gradient-text">Scalable Subscriptions</span></h2>
+                    <p class="section-subtitle">Unlock advanced invoicing automation, dynamic inventory tracking, tax calculations, and AI insights. Choose a plan that grows with your business.</p>
+                    
+                    <!-- Billing Toggle Switcher -->
+                    <div class="billing-switcher-container">
+                        <span class="switcher-lbl" id="lbl-monthly">Monthly</span>
+                        <label class="switch">
+                            <input type="checkbox" id="pricing-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="switcher-lbl" id="lbl-yearly">Yearly <span class="discount-tag">Save 20%</span></span>
+                    </div>
+                </div>
+
+                <!-- Pricing Cards Grids -->
+                <div class="pricing-grid">
+                    
+                    <!-- TIER 1: FREE -->
+                    <div class="pricing-card">
+                        <div class="tier-header">
+                            <h3>Free Tier</h3>
+                            <p>Great for micro-businesses getting started.</p>
+                            <div class="tier-price">
+                                <span class="currency">₹</span><span class="price-val" data-monthly="0" data-yearly="0">0</span><span class="period">/mo</span>
+                            </div>
+                        </div>
+                        <div class="receipt-divider"></div>
+                        <ul class="tier-features">
+                            <li><span class="bullet-tick">✓</span> 1 Active Business User</li>
+                            <li><span class="bullet-tick">✓</span> Basic Billing & Invoicing</li>
+                            <li><span class="bullet-tick">✓</span> Manual Stock Deductions</li>
+                            <li><span class="bullet-tick">✓</span> Standard Dashboard Analytics</li>
+                            <li class="disabled"><span class="bullet-cross">✕</span> Dynamic UPI QR Codes</li>
+                            <li class="disabled"><span class="bullet-cross">✕</span> PDF/Excel Export Tools</li>
+                            <li class="disabled"><span class="bullet-cross">✕</span> AI Business Coach Insights</li>
+                        </ul>
+                        <a href="#simulator" class="btn btn-secondary w-100 mt-auto">Get Started Free</a>
+                    </div>
+
+                    <!-- TIER 2: STARTER -->
+                    <div class="pricing-card">
+                        <div class="tier-header">
+                            <h3>Starter Tier</h3>
+                            <p>For freelancers and service-based professionals.</p>
+                            <div class="tier-price">
+                                <span class="currency">₹</span><span class="price-val" data-monthly="499" data-yearly="399">499</span><span class="period">/mo</span>
+                            </div>
+                        </div>
+                        <div class="receipt-divider"></div>
+                        <ul class="tier-features">
+                            <li><span class="bullet-tick">✓</span> 2 Business Users Included</li>
+                            <li><span class="bullet-tick">✓</span> Direct Export Tools (PDF/Excel)</li>
+                            <li><span class="bullet-tick">✓</span> Dynamic UPI Invoicing Payments</li>
+                            <li><span class="bullet-tick">✓</span> Net-30 Dues Term Tracking</li>
+                            <li><span class="bullet-tick">✓</span> Manual stock tracking logs</li>
+                            <li class="disabled"><span class="bullet-cross">✕</span> Auto Stock Decrements</li>
+                            <li class="disabled"><span class="bullet-cross">✕</span> Automated Customer Reminders</li>
+                        </ul>
+                        <a href="#simulator" class="btn btn-secondary w-100 mt-auto">Subscribe Starter</a>
+                    </div>
+
+                    <!-- TIER 3: GROWTH (RECOMMENDED - WITH GRADIENT GLOW GLASSMORPHISM) -->
+                    <div class="pricing-card popular-card">
+                        <div class="popular-ribbon">🏆 MOST POPULAR</div>
+                        <div class="tier-header">
+                            <h3>Growth Tier</h3>
+                            <p>Complete automation for growing retail & services stores.</p>
+                            <div class="tier-price">
+                                <span class="currency">₹</span><span class="price-val" data-monthly="999" data-yearly="799">999</span><span class="period">/mo</span>
+                            </div>
+                        </div>
+                        <div class="receipt-divider"></div>
+                        <ul class="tier-features">
+                            <li><span class="bullet-tick">✓</span> 5 Multi-Branch Users</li>
+                            <li><span class="bullet-tick">✓</span> <strong>Closed-Loop Stock Decrements</strong></li>
+                            <li><span class="bullet-tick">✓</span> Customized GST/Tax brackets</li>
+                            <li><span class="bullet-tick">✓</span> Automatic PDF Billing Emailer</li>
+                            <li><span class="bullet-tick">✓</span> Automated Overdue Dues Alerts</li>
+                            <li><span class="bullet-tick">✓</span> Fast UPI Webhook Settlement</li>
+                            <li class="disabled"><span class="bullet-cross">✕</span> Advanced AI Business Coach</li>
+                        </ul>
+                        <a href="#simulator" class="btn btn-primary w-100 mt-auto btn-glow">Start Growth Free Trial</a>
+                    </div>
+
+                    <!-- TIER 4: PRO -->
+                    <div class="pricing-card">
+                        <div class="tier-header">
+                            <h3>Pro Tier</h3>
+                            <p>For high-volume suppliers & multi-branch enterprises.</p>
+                            <div class="tier-price">
+                                <span class="currency">₹</span><span class="price-val" data-monthly="1999" data-yearly="1599">1,999</span><span class="period">/mo</span>
+                            </div>
+                        </div>
+                        <div class="receipt-divider"></div>
+                        <ul class="tier-features">
+                            <li><span class="bullet-tick">✓</span> Unlimited Business Workspace Users</li>
+                            <li><span class="bullet-tick">✓</span> White-Label Branding (Own Logo)</li>
+                            <li><span class="bullet-tick">✓</span> Multi-Branch stock sync & pools</li>
+                            <li><span class="bullet-tick">✓</span> <strong>Advanced AI Business Coach</strong></li>
+                            <li><span class="bullet-tick">✓</span> Custom integrations & REST APIs</li>
+                            <li><span class="bullet-tick">✓</span> Dedicated accounting accountant support</li>
+                            <li><span class="bullet-tick">✓</span> Stripe/Razorpay credit webhooks</li>
+                        </ul>
+                        <a href="#simulator" class="btn btn-secondary w-100 mt-auto">Contact Enterprise</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FUTURISTIC GROWTH ROADMAP TIMELINE -->
+        <section class="roadmap-section" id="roadmap">
+            <div class="section-container">
+                <div class="section-header align-center">
+                    <h2 class="section-title">Expansion & <span class="gradient-text">Product Roadmap</span></h2>
+                    <p class="section-subtitle">Following our MVP success, our SaaS pipeline focuses on connecting complete financial chains directly inside Unifyte.</p>
+                </div>
+
+                <div class="timeline-container">
+                    
+                    <!-- Roadmap Vector 1 -->
+                    <div class="timeline-block block-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="time-label bg-blue-trans">Vector 01: Q3 2026</span>
+                            <h3>Payment Settlement Reconciliation</h3>
+                            <p>Direct linking with Razorpay, Paytm, and Stripe webhooks. Unifyte will monitor API networks and mark invoices as PAID automatically upon credit receipt without business owners needing to touch a single button.</p>
+                        </div>
+                    </div>
+
+                    <!-- Roadmap Vector 2 -->
+                    <div class="timeline-block block-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="time-label bg-violet-trans">Vector 02: Q4 2026</span>
+                            <h3>Automated Reminders Sequencing</h3>
+                            <p>Trigger automated email, SMS, and WhatsApp sequences directly to customers with overdue balances. Set custom scheduling timers (e.g. net-30 alert at 3 days remaining, 1 day remaining, and 3 days overdue) to secure healthy cash streams.</p>
+                        </div>
+                    </div>
+
+                    <!-- Roadmap Vector 3 -->
+                    <div class="timeline-block block-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="time-label bg-green-trans">Vector 03: Q1 2027</span>
+                            <h3>Multi-Currency & Regionalization</h3>
+                            <p>Support customized localized taxes beyond Indian GST. Including complete multi-currency settlements, VAT, and US Sales Tax formatting to allow businesses to supply cross-border clients globally.</p>
+                        </div>
+                    </div>
+
+                    <!-- Roadmap Vector 4 -->
+                    <div class="timeline-block block-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="time-label bg-pink-trans">Vector 04: Q2 2027</span>
+                            <h3>Predictive ML Business Coach</h3>
+                            <p>Deep implementation of advanced predictive cash forecasting systems. Receive warnings when procurement costs spike, alerts when seasonal stocks will be in high demand, and flags of clients showing structural invoice default threats.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BOTTOM BRAND CTA SECTION -->
+        <section class="bottom-cta-section">
+            <div class="section-container align-center">
+                <h2>Ready to transform your business accounting?</h2>
+                <p>Join thousands of small business owners scaling operations securely. Open your workspace and invoice your first client today.</p>
+                <div class="bottom-actions">
+                    <a href="#simulator" class="btn btn-primary btn-lg btn-glow">Get Started for Free &rarr;</a>
+                    <a href="#pricing" class="btn btn-secondary btn-lg">Compare Subscription Tiers</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Left brand column -->
+            <div class="footer-brand-col">
+                <a href="#" class="footer-logo">
+                    <svg class="logo-svg-small" viewBox="0 0 100 100">
+                        <path d="M20 20 H36 V60 C36 68 42 74 50 74 C58 74 64 68 64 60 V20 H80 V60 C80 76 67 90 50 90 C33 90 20 76 20 60 Z" fill="url(#logo-gradient)"/>
+                    </svg>
+                    <span>unifyte</span>
+                </a>
+                <p class="footer-desc">Next-generation closed-loop cloud SaaS engine connecting invoicing, stock trackers, and live financial metrics for Micro, Small and Medium-Sized Enterprises (MSMEs).</p>
+                <p class="footer-copy">&copy; 2026 Unifyte Technologies Pvt Ltd. All rights reserved.</p>
+            </div>
+
+            <!-- Links Column 1: Modules -->
+            <div class="footer-links-col">
+                <h4>Product Features</h4>
+                <ul>
+                    <li><a href="#features">Smart Invoicing</a></li>
+                    <li><a href="#simulator">Dynamic UPI QR bills</a></li>
+                    <li><a href="#features">Closed-Loop Inventory</a></li>
+                    <li><a href="#ai-coach">AI Business Coach</a></li>
+                    <li><a href="#hero">Analytics Dashboard</a></li>
+                </ul>
+            </div>
+
+            <!-- Links Column 2: Resources -->
+            <div class="footer-links-col">
+                <h4>Company Info</h4>
+                <ul>
+                    <li><a href="#roadmap">Expansion Roadmap</a></li>
+                    <li><a href="#pricing">Tier Pricing Matrix</a></li>
+                    <li><a href="#">Security Architectures</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <!-- Right newsletter column (With interactive forms) -->
+            <div class="footer-newsletter-col">
+                <h4>Join the Unifyte Newsletter</h4>
+                <p>Receive monthly cash flow optimization strategies, product releases, and early access beta tools.</p>
+                <form class="newsletter-form" id="newsletter-form" onsubmit="return false;">
+                    <div class="input-group">
+                        <input type="email" id="news-email" class="form-control text-white" placeholder="Enter your business email" required>
+                        <button type="submit" class="btn btn-primary" id="btn-subscribe">Join Now</button>
+                    </div>
+                    <p class="newsletter-success text-green" id="news-success-msg">✓ Thank you! You've joined the waitlist.</p>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CHECKOUT SIMULATOR MODAL (WOW Factor) -->
+    <div class="checkout-modal-overlay" id="checkout-modal">
+        <div class="checkout-modal-box glass-card">
+            <button class="checkout-modal-close" id="btn-close-checkout">&times;</button>
+            <div class="checkout-modal-header">
+                <h3>Upgrade to <span class="gradient-text" id="checkout-plan-name">PRO Plan</span></h3>
+                <p>Unlock advanced features and expand your business workspace.</p>
+            </div>
+            
+            <div class="receipt-divider"></div>
+            
+            <div class="checkout-summary-row">
+                <span>Billing Period: <strong>Monthly</strong></span>
+                <span class="checkout-price text-green" id="checkout-plan-price">₹999.00</span>
+            </div>
+
+            <!-- Payment Simulation tabs -->
+            <div class="checkout-payment-tabs">
+                <button class="pay-tab-btn active" id="btn-paytab-upi">⚡ UPI Payment Scan</button>
+                <button class="pay-tab-btn" id="btn-paytab-card">💳 Credit/Debit Card</button>
+            </div>
+
+            <!-- UPI Pane -->
+            <div class="checkout-pay-pane" id="pay-pane-upi">
+                <p class="checkout-instructions">Scan the simulation QR code below with any UPI payment app to approve the workspace license upgrade.</p>
+                <div class="checkout-qr-center">
+                    <svg viewBox="0 0 100 100" class="checkout-qr-svg">
+                        <rect x="5" y="5" width="20" height="20" fill="none" stroke="#ffffff" stroke-width="3" />
+                        <rect x="10" y="10" width="10" height="10" fill="#ffffff" />
+                        <rect x="75" y="5" width="20" height="20" fill="none" stroke="#ffffff" stroke-width="3" />
+                        <rect x="80" y="10" width="10" height="10" fill="#ffffff" />
+                        <rect x="5" y="75" width="20" height="20" fill="none" stroke="#ffffff" stroke-width="3" />
+                        <rect x="10" y="80" width="10" height="10" fill="#ffffff" />
+                        <path d="M 40 10 H 50 V 20 H 40 Z M 60 10 H 70 V 15 H 60 Z M 40 30 H 45 V 40 H 40 Z M 50 35 H 65 V 40 H 50 Z M 10 40 H 25 V 50 H 10 Z M 30 50 H 45 V 60 H 30 Z M 55 50 H 70 V 55 H 55 Z M 75 40 H 90 V 50 H 75 Z M 40 60 H 50 V 70 H 40 Z M 60 70 H 80 V 75 H 60 Z M 40 85 H 55 V 90 H 40 Z M 60 85 H 65 V 90 H 60 Z" fill="#ffffff" />
+                        <rect x="42" y="42" width="16" height="16" fill="#080a14" rx="2" />
+                        <path d="M 46 45 H 50 V 51 C 50 53 52 54 54 54 C 56 54 58 53 58 51 V 45 H 62 V 51 C 62 55 58 58 54 58 C 50 58 46 55 46 51 Z" fill="url(#logo-gradient)" />
+                    </svg>
+                </div>
+                <button class="btn btn-primary w-100 mt-4 btn-glow" id="btn-simulate-pay-upi">
+                    ✅ Simulate UPI Payment Scan
+                </button>
+            </div>
+
+            <!-- Card Pane -->
+            <div class="checkout-pay-pane" id="pay-pane-card" style="display: none;">
+                <p class="checkout-instructions">Enter credit/debit card details. Unifyte does not store or process card logs outside active sandboxes.</p>
+                <div class="checkout-form">
+                    <div class="form-group">
+                        <label>Card Number</label>
+                        <input type="text" class="form-control text-white" value="4111 2222 3333 4444" disabled>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group flex-1">
+                            <label>Expiry Date</label>
+                            <input type="text" class="form-control text-white" value="12/28" disabled>
+                        </div>
+                        <div class="form-group flex-1">
+                            <label>CVV</label>
+                            <input type="password" class="form-control text-white" value="***" disabled>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-100 btn-glow" id="btn-simulate-pay-card">
+                        💳 Authorize Simulated Charge
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading check state -->
+            <div class="checkout-loading-pane" id="checkout-loading-pane">
+                <div class="payment-spinner"></div>
+                <h4>Validating transaction token...</h4>
+                <p class="sub-muted">Unifyte API is listening to active payment rails.</p>
+            </div>
+
+            <!-- Success check state -->
+            <div class="checkout-success-pane" id="checkout-success-pane">
+                <div class="success-checkmark-circle">✓</div>
+                <h4>Transaction Settlement Successful!</h4>
+                <p class="sub-muted">Workspace upgrade active. Validity date and Tenant Registration ID updated.</p>
+                <button class="btn btn-primary mt-4 w-100" id="btn-checkout-success-close">Go to Workspace Billing</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Custom Interactivity Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
