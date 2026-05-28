@@ -678,7 +678,11 @@ document.addEventListener('DOMContentLoaded', () => {
     upgradeButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             targetUpgradePlan = btn.getAttribute('data-upgrade');
-            const priceText = targetUpgradePlan === 'STARTER' ? '₹499.00' : '₹999.00';
+            
+            let priceText = '₹0.00';
+            if (targetUpgradePlan === 'STARTER') priceText = '₹499.00';
+            else if (targetUpgradePlan === 'GROWTH') priceText = '₹999.00';
+            else if (targetUpgradePlan === 'PRO') priceText = '₹1,999.00';
             
             // Populate Modal values
             checkoutPlanName.textContent = targetUpgradePlan + ' Plan';
@@ -783,7 +787,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sub-routine: Helper to refresh plan card selections in active grid
     function updateBillingPortalUI() {
-        const plans = ['free', 'starter', 'pro'];
+        const plans = ['free', 'starter', 'growth', 'pro'];
         
         plans.forEach(planName => {
             const card = document.getElementById(`bp-card-${planName}`);
