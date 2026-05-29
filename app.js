@@ -681,8 +681,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             let priceText = '₹0.00';
             if (targetUpgradePlan === 'STARTER') priceText = '₹499.00';
-            else if (targetUpgradePlan === 'GROWTH') priceText = '₹999.00';
-            else if (targetUpgradePlan === 'PRO') priceText = '₹1,999.00';
+            else if (targetUpgradePlan === 'PRO') priceText = '₹999.00';
             
             // Populate Modal values
             checkoutPlanName.textContent = targetUpgradePlan + ' Plan';
@@ -787,7 +786,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sub-routine: Helper to refresh plan card selections in active grid
     function updateBillingPortalUI() {
-        const plans = ['free', 'starter', 'growth', 'pro'];
+        const plans = ['free', 'starter', 'pro'];
         
         plans.forEach(planName => {
             const card = document.getElementById(`bp-card-${planName}`);
@@ -834,4 +833,160 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // ==========================================
+    // 8. CONTACT / WORKSPACE REGISTRATION FORM MODAL CONTROLLER
+    // ==========================================
+    const contactModal = document.getElementById('contact-modal');
+    const btnCloseContact = document.getElementById('btn-close-contact');
+    const btnContactSuccessClose = document.getElementById('btn-contact-success-close');
+    
+    const contactForm = document.getElementById('contact-reg-form');
+    const contactLoadingPane = document.getElementById('contact-loading-pane');
+    const contactSuccessPane = document.getElementById('contact-success-pane');
+    
+    const contactPlanSelect = document.getElementById('contact-plan');
+    const sqlLogCode = document.getElementById('sql-log-code');
+    
+    // Select buttons that open the contact modal
+    const contactOpenButtons = [
+        document.getElementById('btn-header-cta'),
+        document.getElementById('btn-hero-cta'),
+        document.getElementById('btn-bottom-cta')
+    ].filter(Boolean);
+    
+    const tierSignupButtons = document.querySelectorAll('.btn-tier-signup');
+    
+    // Add open handlers for main CTAs
+    contactOpenButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            openContactModal('FREE'); // default to Free
+        });
+    });
+    
+    // Add open handlers for tier specific buttons
+    tierSignupButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const selectedTier = btn.getAttribute('data-tier') || 'FREE';
+            openContactModal(selectedTier);
+        });
+    });
+    
+    // Open function
+    function openContactModal(tier) {
+        // Reset panes
+        if (contactForm) contactForm.style.display = 'block';
+        if (contactLoadingPane) contactLoadingPane.style.display = 'none';
+        if (contactSuccessPane) contactSuccessPane.style.display = 'none';
+        
+        // Reset form inputs
+        if (contactForm) contactForm.reset();
+        
+        // Select correct option
+        if (contactPlanSelect) {
+            contactPlanSelect.value = tier;
+        }
+        
+        // Open overlay
+        if (contactModal) {
+            contactModal.classList.add('active');
+        }
+    }
+    
+    // Close functions
+    if (btnCloseContact) {
+        btnCloseContact.addEventListener('click', () => {
+            contactModal.classList.remove('active');
+        });
+    }
+    
+    if (btnContactSuccessClose) {
+        btnContactSuccessClose.addEventListener('click', () => {
+            contactModal.classList.remove('active');
+        });
+    }
+    
+    // Form submit listener
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Gather raw inputs
+            const nameRaw = document.getElementById('contact-name').value;
+            const emailRaw = document.getElementById('contact-email').value;
+            const phoneRaw = document.getElementById('contact-phone').value;
+            const companyRaw = document.getElementById('contact-company').value;
+            const indRaw = document.getElementById('contact-industry').value;
+            const planRaw = document.getElementById('contact-plan').value;
+            const msgRaw = document.getElementById('contact-message').value || '';
+
+            // Escape single quotes for the displayed SQL query
+            const nameVal = nameRaw.replace(/'/g, "''");
+            const emailVal = emailRaw.replace(/'/g, "''");
+            const phoneVal = phoneRaw.replace(/'/g, "''");
+            const companyVal = companyRaw.replace(/'/g, "''");
+            const msgVal = msgRaw.replace(/'/g, "''") || 'None';
+            
+            // Generate dynamic INSERT query matching their Postgres schema
+            const insertQuery = `INSERT INTO unicom (
+  name, email, phone, company_name, industry, selected_plan, message
+) VALUES (
+  '${nameVal}',
+  '${emailVal}',
+  '${phoneVal}',
+  '${companyVal}',
+  '${indRaw}',
+  '${planRaw}',
+  '${msgVal}'
+);`;
+            
+            // Inject SQL statement
+            if (sqlLogCode) {
+                sqlLogCode.textContent = insertQuery;
+            }
+            
+            // UI state transition (loader pane display)
+            contactForm.style.display = 'none';
+            contactLoadingPane.style.display = 'flex';
+            
+            // Attempt to submit to real Spring Boot backend
+            const payload = {
+                name: nameRaw,
+                email: emailRaw,
+                phone: phoneRaw,
+                companyName: companyRaw,
+                industry: indRaw,
+                selectedPlan: planRaw,
+                message: msgRaw
+            };
+            
+            fetch('/api/unicom/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('API server rejected lead submission.');
+                }
+                return res.json();
+            })
+            .then(data => {
+                console.log('✅ Registered in unicom database:', data);
+                contactLoadingPane.style.display = 'none';
+                contactSuccessPane.style.display = 'flex';
+            })
+            .catch(err => {
+                console.warn('⚠️ Local API server not reachable or threw error, using fallback simulation:', err.message);
+                // Fallback to visual sandbox simulation
+                setTimeout(() => {
+                    contactLoadingPane.style.display = 'none';
+                    contactSuccessPane.style.display = 'flex';
+                }, 2000);
+            });
+        });
+    }
+
 });
+

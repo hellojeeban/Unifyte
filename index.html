@@ -61,8 +61,7 @@
             </nav>
 
             <div class="nav-actions">
-                <a href="#pricing" class="btn btn-secondary nav-login-btn">Log In</a>
-                <a href="#pricing" class="btn btn-primary nav-cta-btn">Start Free Trial</a>
+                <button class="btn btn-primary nav-cta-btn" id="btn-header-cta">Start Free Trial</button>
             </div>
             
             <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle menu">
@@ -150,7 +149,7 @@
 
                     <!-- Action buttons -->
                     <div class="hero-actions">
-                        <a href="#simulator" class="btn btn-primary btn-lg glowing-btn">Get Started for Free <span class="arrow">→</span></a>
+                        <button class="btn btn-primary btn-lg glowing-btn" id="btn-hero-cta">Get Started for Free <span class="arrow">→</span></button>
                         <span class="hero-security-text">
                             <svg class="secure-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
@@ -359,16 +358,16 @@
                                     <h3 class="billing-pane-title">Choose a plan for your business</h3>
                                     
                                     <!-- Subscription Options Grid -->
-                                    <div class="billing-portal-grid">
+                                    <div class="billing-portal-grid" style="grid-template-columns: repeat(3, 1fr);">
                                         
                                         <!-- PLAN 1: FREE -->
                                         <div class="bp-card active-plan-highlight" id="bp-card-free">
                                             <div class="bp-active-banner-flag" id="bp-flag-free">ACTIVE PLAN</div>
                                             <div class="bp-card-header">
-                                                <span class="bp-plan-name">FREE TIER</span>
-                                                <p class="bp-plan-sub">Great for micro-businesses getting started.</p>
+                                                <span class="bp-plan-name">FREE</span>
+                                                <p class="bp-plan-sub">Perfect for getting started</p>
                                                 <div class="bp-price-row">
-                                                    <span class="bp-price-amt">₹0</span><span class="bp-price-period">/mo</span>
+                                                    <span class="bp-price-amt">₹0</span><span class="bp-price-period">/month</span>
                                                 </div>
                                             </div>
                                             <div class="receipt-divider"></div>
@@ -377,38 +376,38 @@
                                                     <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                                         <polyline points="20 6 9 17 4 12"></polyline>
                                                     </svg>
-                                                    1 Active Business User
+                                                    Up to 5 invoices/mo
                                                 </li>
                                                 <li>
                                                     <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                                         <polyline points="20 6 9 17 4 12"></polyline>
                                                     </svg>
-                                                    Basic Billing & Invoicing
+                                                    Standard PDF delivery
                                                 </li>
                                                 <li>
                                                     <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                                         <polyline points="20 6 9 17 4 12"></polyline>
                                                     </svg>
-                                                    Manual Stock Deductions
+                                                    Basic dashboard analytics
                                                 </li>
                                                 <li>
                                                     <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                                         <polyline points="20 6 9 17 4 12"></polyline>
                                                     </svg>
-                                                    Standard Dashboard Analytics
+                                                    Single user access
                                                 </li>
                                             </ul>
-                                            <button class="bp-btn btn-bp-active" id="bp-btn-free" disabled>Active</button>
+                                            <button class="bp-btn btn-bp-active" id="bp-btn-free" disabled>Downgrade</button>
                                         </div>
 
                                         <!-- PLAN 2: STARTER -->
                                         <div class="bp-card" id="bp-card-starter">
                                             <div class="bp-active-banner-flag" id="bp-flag-starter" style="display: none;">ACTIVE PLAN</div>
                                             <div class="bp-card-header">
-                                                <span class="bp-plan-name">STARTER TIER</span>
-                                                <p class="bp-plan-sub">For freelancers and service-based professionals.</p>
+                                                <span class="bp-plan-name">STARTER</span>
+                                                <p class="bp-plan-sub">Best for growing retail shops</p>
                                                 <div class="bp-price-row">
-                                                    <span class="bp-price-amt">₹499</span><span class="bp-price-period">/mo</span>
+                                                    <span class="bp-price-amt">₹499</span><span class="bp-price-period">/month</span>
                                                 </div>
                                             </div>
                                             <div class="receipt-divider"></div>
@@ -417,97 +416,38 @@
                                                     <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                                         <polyline points="20 6 9 17 4 12"></polyline>
                                                     </svg>
-                                                    2 Business Users Included
+                                                    Unlimited invoices
                                                 </li>
                                                 <li>
                                                     <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                                         <polyline points="20 6 9 17 4 12"></polyline>
                                                     </svg>
-                                                    Direct Export Tools (PDF/Excel)
+                                                    Dynamic UPI QR Codes
                                                 </li>
                                                 <li>
                                                     <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                                         <polyline points="20 6 9 17 4 12"></polyline>
                                                     </svg>
-                                                    Dynamic UPI Invoicing Payments
+                                                    SendGrid automated emails
                                                 </li>
                                                 <li>
                                                     <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                                         <polyline points="20 6 9 17 4 12"></polyline>
                                                     </svg>
-                                                    Net-30 Dues Term Tracking
-                                                </li>
-                                                <li>
-                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                    </svg>
-                                                    Manual stock tracking logs
+                                                    Overdue chaser cron job
                                                 </li>
                                             </ul>
                                             <button class="bp-btn btn-bp-buy" id="bp-btn-starter" data-upgrade="STARTER">Buy Now</button>
                                         </div>
 
-                                        <!-- PLAN 3: GROWTH -->
-                                        <div class="bp-card" id="bp-card-growth">
-                                            <div class="bp-active-banner-flag" id="bp-flag-growth" style="display: none;">ACTIVE PLAN</div>
-                                            <div class="bp-active-banner-flag" id="bp-flag-popular-growth" style="top: 10px; right: 10px; border-bottom-left-radius: 4px; border-top-right-radius: 4px; padding: 3px 6px; font-size: 0.55rem; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));">🏆 POPULAR</div>
-                                            <div class="bp-card-header">
-                                                <span class="bp-plan-name">GROWTH TIER</span>
-                                                <p class="bp-plan-sub">Complete automation for growing retail & services.</p>
-                                                <div class="bp-price-row">
-                                                    <span class="bp-price-amt">₹999</span><span class="bp-price-period">/mo</span>
-                                                </div>
-                                            </div>
-                                            <div class="receipt-divider"></div>
-                                            <ul class="bp-features-list">
-                                                <li>
-                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                    </svg>
-                                                    5 Multi-Branch Users
-                                                </li>
-                                                <li>
-                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                    </svg>
-                                                    Closed-Loop Stock Decrements
-                                                </li>
-                                                <li>
-                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                    </svg>
-                                                    Customized GST/Tax brackets
-                                                </li>
-                                                <li>
-                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                    </svg>
-                                                    Automatic PDF Billing Emailer
-                                                </li>
-                                                <li>
-                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                    </svg>
-                                                    Automated Overdue Dues Alerts
-                                                </li>
-                                                <li>
-                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                    </svg>
-                                                    Fast UPI Webhook Settlement
-                                                </li>
-                                            </ul>
-                                            <button class="bp-btn btn-bp-buy" id="bp-btn-growth" data-upgrade="GROWTH">Buy Now</button>
-                                        </div>
-
-                                        <!-- PLAN 4: PRO -->
+                                        <!-- PLAN 3: PRO -->
                                         <div class="bp-card" id="bp-card-pro">
                                             <div class="bp-active-banner-flag" id="bp-flag-pro" style="display: none;">ACTIVE PLAN</div>
                                             <div class="bp-card-header">
-                                                <span class="bp-plan-name">PRO TIER</span>
-                                                <p class="bp-plan-sub">For high-volume suppliers & multi-branch.</p>
+                                                <span class="bp-plan-name">PRO</span>
+                                                <p class="bp-plan-sub">Built for professional scale</p>
                                                 <div class="bp-price-row">
-                                                    <span class="bp-price-amt">₹1999</span><span class="bp-price-period">/mo</span>
+                                                    <span class="bp-price-amt">₹999</span><span class="bp-price-period">/month</span>
                                                 </div>
                                             </div>
                                             <div class="receipt-divider"></div>
@@ -516,37 +456,25 @@
                                                     <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                                         <polyline points="20 6 9 17 4 12"></polyline>
                                                     </svg>
-                                                    Unlimited Workspace Users
+                                                    Everything in Starter
                                                 </li>
                                                 <li>
                                                     <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                                         <polyline points="20 6 9 17 4 12"></polyline>
                                                     </svg>
-                                                    White-Label Branding (Own Logo)
+                                                    Advanced collection insights
                                                 </li>
                                                 <li>
                                                     <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                                         <polyline points="20 6 9 17 4 12"></polyline>
                                                     </svg>
-                                                    Multi-Branch stock sync & pools
+                                                    Premium receipt screenshots
                                                 </li>
                                                 <li>
                                                     <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                                         <polyline points="20 6 9 17 4 12"></polyline>
                                                     </svg>
-                                                    Advanced AI Business Coach
-                                                </li>
-                                                <li>
-                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                    </svg>
-                                                    Custom integrations & REST APIs
-                                                </li>
-                                                <li>
-                                                    <svg class="bp-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                    </svg>
-                                                    Dedicated accounting support
+                                                    Sentry priority support
                                                 </li>
                                             </ul>
                                             <button class="bp-btn btn-bp-buy" id="bp-btn-pro" data-upgrade="PRO">Buy Now</button>
@@ -979,88 +907,67 @@
                     <div class="pricing-card">
                         <div class="tier-header">
                             <h3>Free Tier</h3>
-                            <p>Great for micro-businesses getting started.</p>
+                            <p>Perfect for getting started.</p>
                             <div class="tier-price">
                                 <span class="currency">₹</span><span class="price-val" data-monthly="0" data-yearly="0">0</span><span class="period">/mo</span>
                             </div>
                         </div>
                         <div class="receipt-divider"></div>
                         <ul class="tier-features">
-                            <li><span class="bullet-tick">✓</span> 1 Active Business User</li>
-                            <li><span class="bullet-tick">✓</span> Basic Billing & Invoicing</li>
-                            <li><span class="bullet-tick">✓</span> Manual Stock Deductions</li>
-                            <li><span class="bullet-tick">✓</span> Standard Dashboard Analytics</li>
+                            <li><span class="bullet-tick">✓</span> Up to 5 invoices/mo</li>
+                            <li><span class="bullet-tick">✓</span> Standard PDF delivery</li>
+                            <li><span class="bullet-tick">✓</span> Basic dashboard analytics</li>
+                            <li><span class="bullet-tick">✓</span> Single user access</li>
+                            <li class="disabled"><span class="bullet-cross">✕</span> Unlimited Invoices</li>
                             <li class="disabled"><span class="bullet-cross">✕</span> Dynamic UPI QR Codes</li>
-                            <li class="disabled"><span class="bullet-cross">✕</span> PDF/Excel Export Tools</li>
-                            <li class="disabled"><span class="bullet-cross">✕</span> AI Business Coach Insights</li>
+                            <li class="disabled"><span class="bullet-cross">✕</span> SendGrid Automated Emails</li>
+                            <li class="disabled"><span class="bullet-cross">✕</span> Overdue Chaser Cron Job</li>
                         </ul>
-                        <a href="#simulator" class="btn btn-secondary w-100 mt-auto">Get Started Free</a>
+                        <button class="btn btn-secondary w-100 mt-auto btn-tier-signup" data-tier="FREE">Get Started Free</button>
                     </div>
 
                     <!-- TIER 2: STARTER -->
                     <div class="pricing-card">
                         <div class="tier-header">
                             <h3>Starter Tier</h3>
-                            <p>For freelancers and service-based professionals.</p>
+                            <p>Best for growing retail shops.</p>
                             <div class="tier-price">
                                 <span class="currency">₹</span><span class="price-val" data-monthly="499" data-yearly="399">499</span><span class="period">/mo</span>
                             </div>
                         </div>
                         <div class="receipt-divider"></div>
                         <ul class="tier-features">
-                            <li><span class="bullet-tick">✓</span> 2 Business Users Included</li>
-                            <li><span class="bullet-tick">✓</span> Direct Export Tools (PDF/Excel)</li>
-                            <li><span class="bullet-tick">✓</span> Dynamic UPI Invoicing Payments</li>
-                            <li><span class="bullet-tick">✓</span> Net-30 Dues Term Tracking</li>
-                            <li><span class="bullet-tick">✓</span> Manual stock tracking logs</li>
-                            <li class="disabled"><span class="bullet-cross">✕</span> Auto Stock Decrements</li>
-                            <li class="disabled"><span class="bullet-cross">✕</span> Automated Customer Reminders</li>
+                            <li><span class="bullet-tick">✓</span> Unlimited invoices</li>
+                            <li><span class="bullet-tick">✓</span> Dynamic UPI QR Codes</li>
+                            <li><span class="bullet-tick">✓</span> SendGrid automated emails</li>
+                            <li><span class="bullet-tick">✓</span> Overdue chaser cron job</li>
+                            <li class="disabled"><span class="bullet-cross">✕</span> Advanced Collection Insights</li>
+                            <li class="disabled"><span class="bullet-cross">✕</span> Premium Receipt Screenshots</li>
+                            <li class="disabled"><span class="bullet-cross">✕</span> Sentry Priority Support</li>
                         </ul>
-                        <a href="#simulator" class="btn btn-secondary w-100 mt-auto">Subscribe Starter</a>
+                        <button class="btn btn-secondary w-100 mt-auto btn-tier-signup" data-tier="STARTER">Subscribe Starter</button>
                     </div>
 
-                    <!-- TIER 3: GROWTH (RECOMMENDED - WITH GRADIENT GLOW GLASSMORPHISM) -->
+                    <!-- TIER 3: PRO (RECOMMENDED - WITH GRADIENT GLOW GLASSMORPHISM) -->
                     <div class="pricing-card popular-card">
                         <div class="popular-ribbon">🏆 MOST POPULAR</div>
                         <div class="tier-header">
-                            <h3>Growth Tier</h3>
-                            <p>Complete automation for growing retail & services stores.</p>
+                            <h3>Pro Tier</h3>
+                            <p>Built for professional scale.</p>
                             <div class="tier-price">
                                 <span class="currency">₹</span><span class="price-val" data-monthly="999" data-yearly="799">999</span><span class="period">/mo</span>
                             </div>
                         </div>
                         <div class="receipt-divider"></div>
                         <ul class="tier-features">
-                            <li><span class="bullet-tick">✓</span> 5 Multi-Branch Users</li>
-                            <li><span class="bullet-tick">✓</span> <strong>Closed-Loop Stock Decrements</strong></li>
-                            <li><span class="bullet-tick">✓</span> Customized GST/Tax brackets</li>
-                            <li><span class="bullet-tick">✓</span> Automatic PDF Billing Emailer</li>
-                            <li><span class="bullet-tick">✓</span> Automated Overdue Dues Alerts</li>
-                            <li><span class="bullet-tick">✓</span> Fast UPI Webhook Settlement</li>
-                            <li class="disabled"><span class="bullet-cross">✕</span> Advanced AI Business Coach</li>
+                            <li><span class="bullet-tick">✓</span> Everything in Starter</li>
+                            <li><span class="bullet-tick">✓</span> <strong>Advanced Collection Insights</strong></li>
+                            <li><span class="bullet-tick">✓</span> <strong>Premium Receipt Screenshots</strong></li>
+                            <li><span class="bullet-tick">✓</span> <strong>Sentry Priority Support</strong></li>
+                            <li class="disabled"><span class="bullet-cross">✕</span> Custom integrations & REST APIs</li>
+                            <li class="disabled"><span class="bullet-cross">✕</span> Dedicated Accounting Support</li>
                         </ul>
-                        <a href="#simulator" class="btn btn-primary w-100 mt-auto btn-glow">Start Growth Free Trial</a>
-                    </div>
-
-                    <!-- TIER 4: PRO -->
-                    <div class="pricing-card">
-                        <div class="tier-header">
-                            <h3>Pro Tier</h3>
-                            <p>For high-volume suppliers & multi-branch enterprises.</p>
-                            <div class="tier-price">
-                                <span class="currency">₹</span><span class="price-val" data-monthly="1999" data-yearly="1599">1,999</span><span class="period">/mo</span>
-                            </div>
-                        </div>
-                        <div class="receipt-divider"></div>
-                        <ul class="tier-features">
-                            <li><span class="bullet-tick">✓</span> Unlimited Business Workspace Users</li>
-                            <li><span class="bullet-tick">✓</span> White-Label Branding (Own Logo)</li>
-                            <li><span class="bullet-tick">✓</span> Multi-Branch stock sync & pools</li>
-                            <li><span class="bullet-tick">✓</span> <strong>Advanced AI Business Coach</strong></li>
-                            <li><span class="bullet-tick">✓</span> Custom integrations & REST APIs</li>
-                            <li><span class="bullet-tick">✓</span> Dedicated accounting support</li>
-                        </ul>
-                        <a href="#simulator" class="btn btn-secondary w-100 mt-auto">Contact Enterprise</a>
+                        <button class="btn btn-primary w-100 mt-auto btn-glow btn-tier-signup" data-tier="PRO">Subscribe Pro</button>
                     </div>
 
                 </div>
@@ -1127,7 +1034,7 @@
                 <h2>Ready to transform your business accounting?</h2>
                 <p>Join thousands of small business owners scaling operations securely. Open your workspace and invoice your first client today.</p>
                 <div class="bottom-actions">
-                    <a href="#simulator" class="btn btn-primary btn-lg btn-glow">Get Started for Free &rarr;</a>
+                    <button class="btn btn-primary btn-lg btn-glow" id="btn-bottom-cta">Get Started for Free &rarr;</button>
                     <a href="#pricing" class="btn btn-secondary btn-lg">Compare Subscription Tiers</a>
                 </div>
             </div>
@@ -1269,6 +1176,89 @@
                 <h4>Transaction Settlement Successful!</h4>
                 <p class="sub-muted">Workspace upgrade active. Validity date and Tenant Registration ID updated.</p>
                 <button class="btn btn-primary mt-4 w-100" id="btn-checkout-success-close">Go to Workspace Billing</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CONTACT / WORKSPACE REGISTRATION FORM MODAL (SaaS DB unicom Integration) -->
+    <div class="checkout-modal-overlay" id="contact-modal">
+        <div class="checkout-modal-box glass-card contact-modal-box">
+            <button class="checkout-modal-close" id="btn-close-contact">&times;</button>
+            <div class="checkout-modal-header">
+                <h3>Start Your <span class="gradient-text">Unifyte Trial</span></h3>
+                <p>Register your Micro-SME tenant node in the subscriber cluster.</p>
+            </div>
+            
+            <div class="receipt-divider"></div>
+
+            <!-- The Registration Contact Form -->
+            <form id="contact-reg-form" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="contact-name">Full Name</label>
+                    <input type="text" id="contact-name" class="form-control text-white" placeholder="Enter contact name" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="contact-email">Business Email</label>
+                        <input type="email" id="contact-email" class="form-control text-white" placeholder="name@company.com" required>
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="contact-phone">Phone Number</label>
+                        <input type="tel" id="contact-phone" class="form-control text-white" placeholder="Enter phone number" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="contact-company">Company Name</label>
+                        <input type="text" id="contact-company" class="form-control text-white" placeholder="Workspace Name" required>
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="contact-industry">Select Industry</label>
+                        <select id="contact-industry" class="form-control">
+                            <option value="Retailer & Wholesaler">Retailer & Wholesaler</option>
+                            <option value="Service Provider">Service Provider</option>
+                            <option value="B2B Supplier" selected>B2B Supplier</option>
+                            <option value="Freelancer/Agency">Freelancer / Agency</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-plan">Select Plan Tier</label>
+                    <select id="contact-plan" class="form-control">
+                        <option value="FREE">Free Tier (₹0/mo)</option>
+                        <option value="STARTER">Starter Tier (₹499/mo)</option>
+                        <option value="PRO">Pro Tier (₹999/mo)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-message">Custom Requirements / Notes</label>
+                    <textarea id="contact-message" class="form-control text-white" rows="2" placeholder="e.g. customized tax brackets, multi-branch pools..." style="resize: none; background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass);"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 mt-4 btn-glow" id="btn-submit-contact">
+                    🚀 Launch Isolated Tenant Workspace
+                </button>
+            </form>
+
+            <!-- Loading check state -->
+            <div class="checkout-loading-pane" id="contact-loading-pane">
+                <div class="payment-spinner"></div>
+                <h4>Provisioning isolated tenant DB schema...</h4>
+                <p class="sub-muted">Syncing catalog models and creating tables inside the cluster database.</p>
+            </div>
+
+            <!-- Success check state with DB feedback query log -->
+            <div class="checkout-success-pane" id="contact-success-pane" style="max-height: 480px; overflow-y: auto;">
+                <div class="success-checkmark-circle">✓</div>
+                <h4 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 8px;">Thank You!</h4>
+                <p class="sub-muted font-sm mb-4" style="color: #cbd5e1; font-size: 0.9rem;">We will get back to you within 24 hours.</p>
+
+                <button class="btn btn-primary w-100 mt-2" id="btn-contact-success-close">OK</button>
             </div>
 
         </div>
